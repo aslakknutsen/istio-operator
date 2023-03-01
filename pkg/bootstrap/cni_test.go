@@ -80,6 +80,13 @@ func TestCNISupportedVersionRendering(t *testing.T) {
 			containerNames:    []string{"install-cni"},
 			daemonsetName:     "istio-cni-node-v2-4",
 		},
+		{
+			name:              "v3.0 only",
+			supportedVersions: []versions.Version{versions.V3_0},
+			instanceVersion:   versions.V3_0.Version(),
+			containerNames:    []string{"install-cni"},
+			daemonsetName:     "istio-cni-node-v3-0",
+		},
 	}
 
 	config := cni.Config{
