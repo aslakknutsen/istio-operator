@@ -53,11 +53,18 @@ spec:
         olm.relatedImage.v2_4.proxyv2: quay.io/maistra/proxyv2-ubi8:2.4.0
         olm.relatedImage.v2_4.rls: quay.io/maistra/ratelimit-ubi8:2.4.0
 
+        olm.relatedImage.v3_0.cni: quay.io/maistra/istio-cni-ubi8:3.0.0
+        olm.relatedImage.v3_0.grafana: quay.io/maistra/grafana-ubi8:3.0.0
+        olm.relatedImage.v3_0.pilot: quay.io/maistra/pilot-ubi8:3.0.0
+        olm.relatedImage.v3_0.prometheus: quay.io/maistra/prometheus-ubi8:3.0.0
+        olm.relatedImage.v3_0.proxyv2: quay.io/maistra/proxyv2-ubi8:3.0.0
+        olm.relatedImage.v3_0.rls: quay.io/maistra/ratelimit-ubi8:3.0.0
+
     spec:
       serviceAccountName: istio-operator
       containers:
       - name: istio-operator
-        image: quay.io/maistra/istio-ubi8-operator:2.4.0
+        image: quay.io/maistra/istio-ubi8-operator:3.0.0
         ports:
         - containerPort: 11999
           name: validation
